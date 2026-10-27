@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#003d79">
+  <title>Diccionario Español–Rumano · REALITER</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <a class="identity" href="/" aria-label="REALITER · inicio">
+        <span class="mark">R<span class="mark-dot">.</span></span>
+        <span class="identity-text"><strong>REALITER</strong><small>Laboratorio de lexicografía digital</small></span>
+      </a>
+      <div class="header-right"><span class="header-note">Demostración académica · YAML</span><button id="auth-button" class="button button-secondary button-small" type="button">Edición local</button></div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <div class="hero-eyebrow"><span class="gold-line"></span> TALLER INTERACTIVO DE DICCIONARIOS DIGITALES</div>
+          <h1 id="page-title">Palabras que conectan <em>dos lenguas.</em></h1>
+          <p>Un diccionario parlante español–rumano: búsqueda léxica, ejemplos contextualizados y pronunciación, a partir de datos estructurados en YAML.</p>
+          <div class="hero-tags"><span>ES <b>↔</b> RO</span><span>Datos YAML</span><span>Audio bilingüe</span></div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="art-symbol"><span>ES</span><i>↔</i><span>RO</span></div>
+          <div class="art-caption">Lexicografía · Tecnología · Lenguaje</div>
+        </div>
+      </section>
+
+      <nav class="tabs" aria-label="Secciones de la demostración">
+        <button type="button" class="tab active" data-panel="dictionary" aria-current="page"><span>01</span> Explorar diccionario</button>
+        <button type="button" class="tab" data-panel="new"><span>02</span> Agregar palabra</button>
+        <button type="button" class="tab" data-panel="yaml"><span>03</span> Laboratorio YAML</button>
+      </nav>
+
+      <div id="notice" class="notice" role="status" hidden></div>
+
+      <section id="dictionary-panel" class="panel visible" aria-label="Búsqueda en diccionario">
+        <div class="section-heading"><div><span class="eyebrow">EXPLORAR</span><h2>Consulta el diccionario</h2><p>Escribe una palabra en español o rumano, incluso sin acentos.</p></div><span id="total-count" class="pill">12 entradas de muestra</span></div>
+        <div class="search-frame"><span class="search-icon" aria-hidden="true">⌕</span><input id="search-input" type="search" autocomplete="off" placeholder="Buscar: casa, casă, agua, apă, diccionario…" aria-label="Buscar palabra o traducción"><kbd>ES / RO</kbd></div>
+        <div class="dictionary-layout">
+          <aside class="results" aria-label="Resultados de búsqueda"><div class="results-heading"><b>Resultados</b><span id="result-count">0 palabras</span></div><div id="result-list" class="result-list"></div></aside>
+          <article class="detail" id="detail" aria-live="polite"><div class="empty">Selecciona una palabra para abrir su ficha lexicográfica.</div></article>
+        </div>
+      </section>
+
+      <section id="new-panel" class="panel" aria-label="Agregar palabra nueva" hidden>
+        <div class="section-heading"><div><span class="eyebrow">AMPLIAR EL CORPUS</span><h2>Agrega una entrada lexicográfica</h2><p>Al guardar, la entrada se añade al archivo <code>diccionario.yaml</code>.</p></div></div>
+        <div class="editor-card">
+          <form id="new-form">
+            <div class="form-subtitle"><span class="step-number">1</span><div><h3>Palabra y significado</h3><p>Completa la equivalencia bilingüe.</p></div></div>
+            <div class="form-grid">
+              <label>Palabra en español <span class="required">*</span><input name="es" maxlength="100" placeholder="Ej. ventana" required></label>
+              <label>Palabra en rumano <span class="required">*</span><input name="ro" maxlength="100" placeholder="Ej. fereastră" required></label>
+              <label class="full">Significado en español <span class="required">*</span><textarea name="significado" rows="2" maxlength="700" placeholder="Definición breve de la palabra" required></textarea></label>
+            </div>
+            <div class="form-subtitle separated"><span class="step-number">2</span><div><h3>Ejemplo en contexto</h3><p>Una oración y su equivalente en rumano.</p></div></div>
+            <div class="form-grid">
+              <label>Ejemplo español <span class="required">*</span><textarea name="ejemplo_es" rows="2" maxlength="500" placeholder="Abro la ventana cada mañana." required></textarea></label>
+              <label>Ejemplo rumano <span class="required">*</span><textarea name="ejemplo_ro" rows="2" maxlength="500" placeholder="Deschid fereastra în fiecare dimineață." required></textarea></label>
+            </div>
+            <div class="form-subtitle separated"><span class="step-number">3</span><div><h3>Grabaciones (opcionales)</h3><p>Sube MP3, WAV, OGG, M4A o WEBM; máximo 2 MB por archivo. Si no subes un audio, se ofrece la voz del navegador cuando esté disponible.</p></div></div>
+            <div class="form-grid file-grid">
+              <label>Audio de la palabra · ES<input id="word-audio-es" type="file" accept="audio/*,.wav,.mp3,.ogg,.m4a,.webm"></label>
+              <label>Audio de la palabra · RO<input id="word-audio-ro" type="file" accept="audio/*,.wav,.mp3,.ogg,.m4a,.webm"></label>
+              <label>Audio del ejemplo · ES<input id="example-audio-es" type="file" accept="audio/*,.wav,.mp3,.ogg,.m4a,.webm"></label>
+              <label>Audio del ejemplo · RO<input id="example-audio-ro" type="file" accept="audio/*,.wav,.mp3,.ogg,.m4a,.webm"></label>
+            </div>
+            <div class="form-footer"><span>Los cambios se guardan directamente en YAML.</span><button class="button button-primary" type="submit">＋ Guardar palabra</button></div>
+          </form>
+        </div>
+      </section>
+
+      <section id="yaml-panel" class="panel" aria-label="Laboratorio de YAML" hidden>
+        <div class="section-heading"><div><span class="eyebrow">OBSERVAR · EDITAR · APRENDER</span><h2>Así se construye el diccionario</h2><p>Las fichas que ves arriba provienen de este archivo de texto estructurado.</p></div><a class="button button-secondary" href="/api/export" download="diccionario_es_ro.yaml">↓ Descargar YAML</a></div>
+        <div class="yaml-layout">
+          <div class="yaml-editor-card"><div class="editor-toolbar"><span class="editor-filename"><span class="code-dot"></span> diccionario.yaml</span><span>YAML · UTF-8</span></div><label class="sr-only" for="yaml-editor">Contenido editable del archivo YAML</label><textarea id="yaml-editor" spellcheck="false" aria-label="Código YAML"></textarea><div class="yaml-action"><span id="yaml-hint">La sangría y los guiones definen la estructura.</span><button id="save-yaml" type="button" class="button button-primary">Guardar cambios YAML</button></div></div>
+          <aside class="lesson-card"><span class="eyebrow">GUÍA DEL TALLER</span><h3>¿Qué estamos viendo?</h3><div class="lesson-item"><b>01 / Entrada</b><p>Cada elemento de <code>palabras:</code> contiene un término español y su traducción rumana.</p></div><div class="lesson-item"><b>02 / Definición</b><p>El campo <code>significado:</code> registra la descripción en español.</p></div><div class="lesson-item"><b>03 / Ejemplos</b><p><code>ejemplos:</code> es una lista: una misma palabra puede tener múltiples ejemplos bilingües.</p></div><div class="lesson-item"><b>04 / Audio</b><p><code>audio_es:</code> y <code>audio_ro:</code> vinculan la entrada con archivos de pronunciación.</p></div><p class="lesson-warning">Práctica sugerida: modifica una definición, añade un ejemplo, guarda y vuelve al diccionario para comprobar el cambio.</p></aside>
+        </div>
+      </section>
+    </main>
+
+    <footer><span><b>REALITER</b> · Prototipo para taller académico</span><span>Datos abiertos para experimentación · Español ↔ Rumano</span></footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+# Diccionario español–rumano · datos de demostración para REALITER
+# Las voces de ejemplo están sintetizadas y pueden sustituirse por grabaciones reales.
+palabras:
+- id: 9c0a7a148887
+  es: hola
+  ro: salut
+  significado: Saludo que se utiliza al encontrarse con otra persona.
+  audio_es: b0849795992843614f221cb73dd3b968.wav
+  audio_ro: 8ea93b9a07858d0f4292bec26a0620ad.wav
+  ejemplos:
+  - es: Hola, ¿cómo estás?
+    ro: Salut, ce mai faci?
+    audio_es: f649b1ba10c5ac9ebf27ed1d6ef69dd9.wav
+    audio_ro: 56ecb1b9ccb85e353a0be19f45650e7b.wav
+- id: fef88d5e98f3
+  es: casa
+  ro: casă
+  significado: Edificio o lugar destinado a vivir.
+  audio_es: 6b57d6973680640c9e2ac4d559732a86.wav
+  audio_ro: d791f7830f7ccf190fb3d91859420237.wav
+  ejemplos:
+  - es: Mi casa está cerca del parque.
+    ro: Casa mea este aproape de parc.
+    audio_es: ac138ef6eecc0cd278387604e04c9ca6.wav
+    audio_ro: ba306fc3e012894fdd7d0e3720326fcd.wav
+- id: d1b82ebe3ac9
+  es: agua
+  ro: apă
+  significado: Sustancia líquida esencial para la vida.
+  audio_es: f8712140a0211b43181cbd38f6ec85ce.wav
+  audio_ro: e34e37abb24dcbb4825e74c79c94237e.wav
+  ejemplos:
+  - es: Quiero un vaso de agua.
+    ro: Vreau un pahar cu apă.
+    audio_es: cfdd3bbbb5a1ff1ace03c65b5bb9398f.wav
+    audio_ro: 4b9604a9b250b9c73859fdd0bb3dbab2.wav
+- id: 80d736de7dfe
+  es: libro
+  ro: carte
+  significado: Conjunto de páginas que forman una obra escrita.
+  audio_es: 7d9a2633afdfa10c9d9bda26e6286dd5.wav
+  audio_ro: ea25c1339f30b1fd8930a7e283229e7f.wav
+  ejemplos:
+  - es: Estoy leyendo un libro interesante.
+    ro: Citesc o carte interesantă.
+    audio_es: ab568f1d72d7ddad1f3018a2dae66601.wav
+    audio_ro: aa07ed489e3ed403d794c8cada8243a2.wav
+- id: e4be994fe4d6
+  es: escuela
+  ro: școală
+  significado: Institución dedicada a la enseñanza.
+  audio_es: e8182553932147c897699b98fd3135f4.wav
+  audio_ro: f1162057dd97a0c645f971498f173969.wav
+  ejemplos:
+  - es: Los niños van a la escuela.
+    ro: Copiii merg la școală.
+    audio_es: c3412f1824fc350cae9de78f70c8609f.wav
+    audio_ro: d0fadc0cedfea7066034022c985041d8.wav
+- id: 0ac5fb7528e5
+  es: amigo
+  ro: prieten
+  significado: Persona con quien existe una relación de amistad.
+  audio_es: cc82ae3637c8439dba4ed2252f51f4ed.wav
+  audio_ro: dd4d97ccf86f8ba37182e57b3462f71c.wav
+  ejemplos:
+  - es: Mi amigo vive en Bucarest.
+    ro: Prietenul meu locuiește în București.
+    audio_es: 7807b45f0ec4c17940444578eaef52d9.wav
+    audio_ro: 342c421c24c3e601af7fbf5adea9c8b0.wav
+- id: 7091548e29f4
+  es: gracias
+  ro: mulțumesc
+  significado: Expresión usada para manifestar agradecimiento.
+  audio_es: a6fab1fab16609a38be8724489086a0e.wav
+  audio_ro: 0dfcc8b5846b2729f0d5997281693ecb.wav
+  ejemplos:
+  - es: Gracias por tu ayuda.
+    ro: Mulțumesc pentru ajutor.
+    audio_es: f768b3789be23fcef21dbb1b44d407eb.wav
+    audio_ro: dedacedb686ec3b202cac49d359877de.wav
+- id: 2e428ae1c9e6
+  es: pan
+  ro: pâine
+  significado: Alimento elaborado generalmente con harina, agua y levadura.
+  audio_es: 068b9294d5920e270c288e82abc014ef.wav
+  audio_ro: 83690ee04f1ffb8ab24cf3e4d90bf303.wav
+  ejemplos:
+  - es: Compramos pan fresco cada mañana.
+    ro: Cumpărăm pâine proaspătă în fiecare dimineață.
+    audio_es: 63b47b6ab45cc1cdd212352fbe14a0b2.wav
+    audio_ro: 76999ff0d85edc5da85fe6c61e36a877.wav
+- id: 57f3578c3464
+  es: familia
+  ro: familie
+  significado: Grupo de personas unidas por vínculos familiares.
+  audio_es: 14c037af4dd93ce507a0a6e5a1cbf356.wav
+  audio_ro: cebb891a35e0d240605ed40e662e32c0.wav
+  ejemplos:
+  - es: Mi familia se reúne los domingos.
+    ro: Familia mea se reunește duminica.
+    audio_es: 86327412470ba4c054cd21b5ef32348d.wav
+    audio_ro: 869aaac8ba59db0345217e9fc383c626.wav
+- id: 4d7836e4e803
+  es: música
+  ro: muzică
+  significado: Arte de organizar sonidos y silencios.
+  audio_es: a4f64b015253b60c87ad840f176f3105.wav
+  audio_ro: f188e7c2ae1ae935afaf3983f668304c.wav
+  ejemplos:
+  - es: Escuchamos música por la noche.
+    ro: Ascultăm muzică seara.
+    audio_es: 7de46cdf0c3180563cc2ff8f6cf8bb86.wav
+    audio_ro: 5cf9981cd70f26fb8338af643d647240.wav
+- id: e47da26b8e02
+  es: viaje
+  ro: călătorie
+  significado: Desplazamiento de un lugar a otro.
+  audio_es: 856158c5a53e1a169bb4d167e8b58dcc.wav
+  audio_ro: f2621671acd0828416b3a7ec8545a1d8.wav
+  ejemplos:
+  - es: El viaje a Rumanía fue memorable.
+    ro: Călătoria în România a fost memorabilă.
+    audio_es: c59121c8bdd47072097cdb6c04f5966b.wav
+    audio_ro: fbb766727c06fecec62bf096723383d5.wav
+- id: 6960375f4a40
+  es: diccionario
+  ro: dicționar
+  significado: Obra que reúne palabras y sus significados u otras informaciones.
+  audio_es: 55cec3e76c31eca5f3cbd74c338449f3.wav
+  audio_ro: 96f421f3ced864106956b5be144f8ed5.wav
+  ejemplos:
+  - es: El diccionario contiene ejemplos y audios.
+    ro: Dicționarul conține exemple și fișiere audio.
+    audio_es: 44d6a6609178bf43ff476518977cf7f1.wav
+    audio_ro: 3db8cc8b10069bd6cf651d6228addbd8.wav
